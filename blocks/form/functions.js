@@ -56,6 +56,13 @@ function maskMobileNumber(mobileNumber) {
   return ` ${'*'.repeat(5)}${value.substring(5)}`;
 }
 
+/**
+* Alert Offer Not Available *
+*/
+function alertOfferNotAvailable() {
+  alert('Offer not available for this mobile number');
+}
+
 // eslint-disable-next-line import/prefer-default-export
 export {
   getFullName, days, submitFormArrayToString, maskMobileNumber,
