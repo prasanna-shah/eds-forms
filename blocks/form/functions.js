@@ -96,5 +96,5 @@ function calculateEMI(principal, annualRate, tenureMonths) {
 
 // eslint-disable-next-line import/prefer-default-export
 export {
-  getFullName, days, submitFormArrayToString, maskMobileNumber, calculateEMI, calculateEmiTest
+  getFullName, days, submitFormArrayToString, maskMobileNumber, calculateEMI, calculateEmiTest,
 };
