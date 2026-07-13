@@ -32,7 +32,7 @@ function calculateEmiTest(principal, annualRate, tenureMonths) {
  * @param {string} tenureMonths in Stringformat
  * @return {number}
  */
-function calculateEmi(principal, annualRate, tenureMonths) {
+function calculateEMI(principal, annualRate, tenureMonths) {
   if (!principal || !annualRate || !tenureMonths) {
     return 0;
   }
