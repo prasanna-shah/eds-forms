@@ -76,7 +76,7 @@ function calculateEMI(principal, annualRate, tenureMonths) {
   if (P <= 0 || r <= 0 || n <= 0) {
     return 0;
   }
-  const onePlusRPowN = Math.pow(1 + r, n);
+  const onePlusRPowN = (1 + r) ** n;
   const emi = (P * r * onePlusRPowN) / (onePlusRPowN - 1);
   return Math.round(emi * 100) / 100;
 }
