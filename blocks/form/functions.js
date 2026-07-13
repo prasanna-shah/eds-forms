@@ -57,6 +57,18 @@ function maskMobileNumber(mobileNumber) {
 }
 
 /**
+ * Calculate EMI Test
+ * @name calculateEmiTest
+ * @param {string} principal in Stringformat
+ * @param {string} annualRate in Stringformat
+ * @param {string} tenureMonths in Stringformat
+ * @return {string}
+ */
+function calculateEmiTest(principal, annualRate, tenureMonths) {
+  return "hello EMI Test";
+}
+
+/**
  * Calculate EMI
  * @name calculateEMI Calculates Equated Monthly Installment
  * @param {number} principal in Numberformat
