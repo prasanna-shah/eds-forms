@@ -1,8 +1,8 @@
 // Form URL - https://main--aem-boilerplate-forms-ws--adobe-rnd.aem.live/content/aem-forms/customization
 // Step 1 - View
 /* globals fieldDiv, fieldJson, formId, fieldModel */
-import { createOptimizedPicture } from '../../scripts/aem.js';
-import { subscribe } from './rules/index.js';
+import { createOptimizedPicture } from './scripts/aem.js';
+import { subscribe } from './blocks/form/rules/index.js';
 
 /**
  * Creates a card component from radio wrapper elements
