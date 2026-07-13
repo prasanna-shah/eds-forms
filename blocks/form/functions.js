@@ -57,10 +57,30 @@ function maskMobileNumber(mobileNumber) {
 }
 
 /**
-* Alert Offer Not Available *
-*/
-function alertOfferNotAvailable() {
-  alert('Offer not available for this mobile number');
+ * Calculate EMI using standard formula
+ * @name calculateEMI Calculates Equated Monthly Installment
+ * @param {number} principal Loan amount in rupees
+ * @param {number} annualRate Annual rate of interest in percentage (e.g. 10.20)
+ * @param {number} tenureMonths Loan tenure in months
+ * @return {number} Monthly EMI amount rounded to 2 decimal places
+ */
+function calculateEMI(principal, annualRate, tenureMonths) {
+  if (!principal || !annualRate || !tenureMonths) {
+    return 0;
+  }
+
+  const P = parseFloat(principal);
+  const r = parseFloat(annualRate) / 12 / 100;
+  const n = parseFloat(tenureMonths);
+
+  if (P <= 0 || r <= 0 || n <= 0) {
+    return 0;
+  }
+
+  const onePlusRPowN = Math.pow(1 + r, n);
+  const emi = (P * r * onePlusRPowN) / (onePlusRPowN - 1);
+
+  return Math.round(emi * 100) / 100;
 }
 
 // eslint-disable-next-line import/prefer-default-export
