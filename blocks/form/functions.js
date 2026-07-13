@@ -25,7 +25,7 @@ function calculateEmiTest(principal, annualRate, tenureMonths) {
 }
 
 /**
- * Calculate EMI Test
+ * Calculate EMI
  * @name calculateEmiTest
  * @param {string} principal in Stringformat
  * @param {string} annualRate in Stringformat
