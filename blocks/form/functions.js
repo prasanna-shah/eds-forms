@@ -66,7 +66,7 @@ function maskMobileNumber(mobileNumber) {
  */
 function calculateEmiTest(principal, annualRate, tenureMonths) {
   if (!principal || !annualRate || !tenureMonths) {
-    return `0`;
+    return 0;
   }
   return Math.round(principal * 100) / 100;
 }
@@ -96,5 +96,5 @@ function calculateEMI(principal, annualRate, tenureMonths) {
 
 // eslint-disable-next-line import/prefer-default-export
 export {
-  getFullName, days, submitFormArrayToString, maskMobileNumber, calculateEMI,
+  getFullName, days, submitFormArrayToString, maskMobileNumber, calculateEMI, calculateEmiTest
 };
