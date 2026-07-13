@@ -12,9 +12,9 @@ function getFullName(firstname, lastname) {
 /**
  * Calculate EMI Test
  * @name calculateEmiTest
- * @param {string} principal in Stringformat
- * @param {string} annualRate in Stringformat
- * @param {string} tenureMonths in Stringformat
+ * @param {*} principal in Stringformat
+ * @param {*} annualRate in Stringformat
+ * @param {*} tenureMonths in Stringformat
  * @return {number}
  */
 function calculateEmiTest(principal, annualRate, tenureMonths) {
@@ -26,11 +26,10 @@ function calculateEmiTest(principal, annualRate, tenureMonths) {
 
 /**
  * Calculate EMI
- * @name calculateEmiTest
- * @param {string} principal in Stringformat
- * @param {string} annualRate in Stringformat
- * @param {string} tenureMonths in Stringformat
- * @return {number}
+ * @param {*} principal in Stringformat
+ * @param {*} annualRate in Stringformat
+ * @param {*} tenureMonths in Stringformat
+ * @return {number} the calculated emi
  */
 function calculateEMI(principal, annualRate, tenureMonths) {
   if (!principal || !annualRate || !tenureMonths) {
