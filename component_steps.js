@@ -49,4 +49,16 @@ subscribe(fieldDiv, formId, (div, model) => {
   model.subscribe((e) => {
     const { payload } = e;
     payload?.changes?.forEach((change) => {
-      if (change?.propertyName ===
+      if (change?.propertyName === 'enum') {
+        createCard(fieldDiv, fieldJson, change.currentValue);
+      }
+    });
+  });
+});
+
+// Step 3 => Value to Model Update
+fieldDiv.addEventListener('change', (e) => {
+  e.stopPropagation();
+  const value = fieldModel.enum?.[parseInt(e.target.dataset.index, 10)];
+  fieldModel.value = value?.name;
+});
