@@ -10,6 +10,44 @@ function getFullName(firstname, lastname) {
 }
 
 /**
+ * Calculate EMI Test
+ * @name calculateEmiTest
+ * @param {string} principal in Stringformat
+ * @param {string} annualRate in Stringformat
+ * @param {string} tenureMonths in Stringformat
+ * @return {number}
+ */
+function calculateEmiTest(principal, annualRate, tenureMonths) {
+  if (!principal || !annualRate || !tenureMonths) {
+    return 0;
+  }
+  return Math.round(principal * 100) / 100;
+}
+
+/**
+ * Calculate EMI Test
+ * @name calculateEmiTest
+ * @param {string} principal in Stringformat
+ * @param {string} annualRate in Stringformat
+ * @param {string} tenureMonths in Stringformat
+ * @return {number}
+ */
+function calculateEmi(principal, annualRate, tenureMonths) {
+  if (!principal || !annualRate || !tenureMonths) {
+    return 0;
+  }
+  const P = parseFloat(principal);
+  const r = parseFloat(annualRate) / 12 / 100;
+  const n = parseFloat(tenureMonths);
+  if (P <= 0 || r <= 0 || n <= 0) {
+    return 0;
+  }
+  const onePlusRPowN = (1 + r) ** n;
+  const emi = (P * r * onePlusRPowN) / (onePlusRPowN - 1);
+  return Math.round(emi * 100) / 100;
+}
+
+/**
  * Custom submit function
  * @param {scope} globals
  */
@@ -56,45 +94,7 @@ function maskMobileNumber(mobileNumber) {
   return ` ${'*'.repeat(5)}${value.substring(5)}`;
 }
 
-/**
- * Calculate EMI Test
- * @name calculateEmiTest
- * @param {string} principal in Stringformat
- * @param {string} annualRate in Stringformat
- * @param {string} tenureMonths in Stringformat
- * @return {number}
- */
-function calculateEmiTest(principal, annualRate, tenureMonths) {
-  if (!principal || !annualRate || !tenureMonths) {
-    return 0;
-  }
-  return Math.round(principal * 100) / 100;
-}
-
-/**
- * Calculate EMI
- * @name calculateEMI Calculates Equated Monthly Installment
- * @param {number} principal in Numberformat
- * @param {number} annualRate in Numberformat
- * @param {number} tenureMonths in Numberformat
- * @return {number}
- */
-function calculateEMI(principal, annualRate, tenureMonths) {
-  if (!principal || !annualRate || !tenureMonths) {
-    return 0;
-  }
-  const P = parseFloat(principal);
-  const r = parseFloat(annualRate) / 12 / 100;
-  const n = parseFloat(tenureMonths);
-  if (P <= 0 || r <= 0 || n <= 0) {
-    return 0;
-  }
-  const onePlusRPowN = (1 + r) ** n;
-  const emi = (P * r * onePlusRPowN) / (onePlusRPowN - 1);
-  return Math.round(emi * 100) / 100;
-}
-
 // eslint-disable-next-line import/prefer-default-export
 export {
-  getFullName, days, submitFormArrayToString, maskMobileNumber, calculateEMI, calculateEmiTest,
+  maskMobileNumber, calculateEMI, calculateEmiTest, getFullName, days, submitFormArrayToString,
 };
