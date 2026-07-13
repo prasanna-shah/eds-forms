@@ -1,13 +1,18 @@
 // Form URL - https://main--aem-boilerplate-forms-ws--adobe-rnd.aem.live/content/aem-forms/customization
-
 // Step 1 - View
+/* globals fieldDiv, fieldJson, formId, fieldModel */
+import { createOptimizedPicture } from '../../scripts/aem.js';
+import { subscribe } from './rules/index.js';
 
-import { createOptimizedPicture } from '../../../../scripts/aem.js';
-import { subscribe } from '../../rules/index.js';
-
-function createCard(element, fieldJson, enums) {
+/**
+ * Creates a card component from radio wrapper elements
+ * @param {HTMLElement} element - The field div element
+ * @param {object} json - The field JSON configuration
+ * @param {Array} enums - Optional enum values to override
+ */
+function createCard(element, json, enums) {
   // eslint-disable-next-line no-param-reassign
-  if (!enums) enums = fieldJson.enumNames.map((e) => ({ ...e, benefits: 'benefits1,benefits2' }));
+  if (!enums) enums = json.enumNames.map((e) => ({ ...e, benefits: 'benefits1,benefits2' }));
   element.querySelectorAll('.radio-wrapper').forEach((radioWrapper, index) => {
     if (enums[index]?.name) {
       let label = radioWrapper.querySelector('label');
@@ -18,7 +23,10 @@ function createCard(element, fieldJson, enums) {
       label.textContent = enums[index]?.name;
     }
     radioWrapper.querySelector('input').dataset.index = index;
-    const image = createOptimizedPicture(enums[index].image || 'https://main--afb--jalagari.hlx.page/lab/images/card.png', 'card-image');
+    const image = createOptimizedPicture(
+      enums[index].image || 'https://main--afb--jalagari.hlx.page/lab/images/card.png',
+      'card-image',
+    );
     const benefitsUl = document.createElement('ul');
     benefitsUl.className = 'card-choice-benefits-list';
     const benefits = enums[index]?.benefits?.split(',')?.map((b) => b.trim())?.filter(Boolean);
@@ -32,27 +40,13 @@ function createCard(element, fieldJson, enums) {
   });
 }
 
-//  Decorate
+// Decorate
 createCard(fieldDiv, fieldJson);
 fieldDiv.classList.add('card');
 
 // Step 2 => Model to View Update
-
-subscribe(fieldDiv, formId, (div, fieldModel) => {
-  fieldModel.subscribe((e) => {
+subscribe(fieldDiv, formId, (div, model) => {
+  model.subscribe((e) => {
     const { payload } = e;
     payload?.changes?.forEach((change) => {
-      if (change?.propertyName === 'enum') {
-        createCard(fieldDiv, fieldJson, change.currentValue);
-      }
-    });
-  });
-});
-
-// Step 3 => Value to Model Update
-
-fieldDiv.addEventListener('change', (e) => {
-  e.stopPropagation();
-  const value = fieldModel.enum?.[parseInt(e.target.dataset.index, 10)];
-  fieldModel.value = value?.name;
-});
+      if (change?.propertyName ===
