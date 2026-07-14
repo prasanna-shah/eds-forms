@@ -18,6 +18,12 @@ function getFullName(firstname, lastname) {
  * @return {number}
  */
 function calculateEmiTest(principal, annualRate, tenureMonths) {
+  if (!annualRate) {
+    return 11;
+  }
+  if (!tenureMonths) {
+    return 21;
+  }
   return Math.round(principal) / 100;
 }
 
