@@ -18,8 +18,7 @@ function getFullName(firstname, lastname) {
  * @return {number}
  */
 function calculateEmiTest(principal, annualRate, tenureMonths) {
-  console.log(principal);
-  return Math.round(principal + annualRate + tenureMonths) / 100;
+  return Math.round(principal) / 100;
 }
 
 /**
