@@ -792,3 +792,237 @@ main div.form-wrapper {
 main .form form select[multiple] {
     height: calc(42px + 50px);
 }
+
+.panel-wrapper.field-header-fragment {
+    background: #023664 !important;
+}
+
+.panel-wrapper.field-header {
+    padding: 24px 24px !important;
+    background: #023664 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between;
+}
+
+.field-header-fragment .field-form-image1782896959799 {
+    width: 178px;
+}
+
+main div.form-wrapper {
+    background: white;
+    padding: 0 !important;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgb(0 0 0 / 8%);
+}
+
+main .form form .field-wrapper {
+    margin: 0;
+}
+main .form form .field-wrapper.wizard {
+    padding: 0 90px;
+}
+
+.field-header-fragment legend {
+    display: none;
+}
+
+.panel-wrapper.field-footer-fragment {
+    background: #023664 !important;
+    text-align: center;
+    padding: 5px 10px 0;
+}
+
+.panel-wrapper.field-footer {
+    padding: 24px 24px !important;
+    background: #023664 !important;
+}
+
+.field-footer-fragment legend {
+    display: none;
+}
+.field-footer-text p{
+    color: #fff !important;
+}
+
+.field-wrapper.wizard > legend {
+    display: none;
+}
+
+.field-form-fragment1783497689718 > legend {
+    display: none;
+}
+
+.field-wrapper.wizard .wizard-menu-items {
+    display: none;
+}
+
+.header-wrapper, .footer-wrapper {
+    display: none;
+}
+
+main .form form .field-wrapper.wizard .wizard-button-wrapper {
+    display: none;
+}
+
+main .form .button-wrapper button {
+    border-radius: 10px;
+}
+
+form .field-wrapper .field-offer-not-available-error p{
+    color: red;
+}
+
+main .form .button-wrapper.field-edit-mobile-number button {
+    background: none;
+    color: #3b63fb;
+    padding: 0;
+}
+
+main .form .range-widget-wrapper.decorated input[type="range"] {
+    background-image: linear-gradient(to right, #f5a623 calc(100% * var(--current-steps) / var(--total-steps)), #f5a623 calc(100% * var(--current-steps) / var(--total-steps)));
+}
+
+.field-loan-offer-summary-card legend {
+    display: none;
+}
+
+main .form form .field-loan-offer-summary-card {
+    background: #fffce8;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 26px 10px 40px;
+}
+
+
+main .form form .field-offer-heading-text p {
+    font-size: 18px;
+    font-weight: 700;
+    color: #131313;
+    margin-top: 0.25rem;
+    margin-bottom: -10px;
+    padding-bottom: 0.5rem;
+}
+
+main .form form .field-loan-amount-value {
+    font-size: 25px;
+    font-weight: 700;
+    color: #131313;
+    border-bottom: 1.5px dotted #ddd0a0;
+    padding-bottom: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+main .form form .field-emi-amount-display p {
+    font-size: 14px;
+}
+main .form form .field-rate-of-interest-display p {
+    font-size: 14px; 
+}
+main .form form .plain-text-wrapper.field-wrapper.col-12 p {
+    font-size: 18px;
+}
+main .form form .plain-text-wrapper.c.field-wrapper {
+    margin-top: 20px;
+}
+main .form form .field-emi-amount-value,
+main .form form .field-rate-of-interest-value,
+main .form form .field-taxes-value p{
+    color: black; 
+	padding-left: 10px;
+}
+
+main .form form .field-emi-amount-display {
+    border-left: 3px solid #f5a623;
+    margin-bottom: -35px;
+    padding: 0 10px 15px 10px;
+}
+main .form form .field-rate-of-interest-display {
+    border-left: 3px solid #f5a623;
+    margin-bottom: -35px;
+    padding: 0 10px 15px 10px;
+}
+
+main .form form .plain-text-wrapper.c.field-wrapper {
+    border-left: 3px solid #f5a623;
+    margin-bottom: -35px;
+    padding: 0 10px 15px 10px;
+}
+
+main .form form .plain-text-wrapper.field-taxes-display {
+    border-left: 3px solid #f5a623;
+    margin-bottom: -35px;
+    padding: 10px 10px 15px 10px;
+	margin-top: 20px;
+}
+
+main .form form .field-offer-disclaimer-text {
+    background: #f5a623;
+    padding: 0.75rem 1rem 0.75rem 2.25rem;
+    margin: 0 -27px 0 -38px !important;
+}
+main .form form .field-offer-disclaimer-text p {
+    color: #fff !important;
+    font-size: 14px !important;
+}
+
+.field-panelcontainer-5824973281784025700149 > legend {
+    display: none;
+}
+main .form form .field-wrapper .field-loan-details-panel .text-wrapper {
+    padding: 10px 20px 0 20px;
+    border-left: 3px solid #99bce2;
+	margin-top: 20px;
+    margin-bottom: 20px;
+}
+main .form form .field-wrapper .field-loan-details-panel .text-wrapper input{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+main .form form .field-wrapper .field-personal-details-panel .text-wrapper {
+    padding: 10px 20px 0 20px;
+    border-left: 3px solid #99bce2;
+	margin-top: 20px;
+    margin-bottom: 20px;
+}
+main .form form .field-wrapper .field-personal-details-panel .text-wrapper input{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+main .form form .field-wrapper .field-personal-details-panel .date-wrapper {
+    padding: 10px 20px 0 20px;
+    border-left: 3px solid #99bce2;
+	margin-top: 20px;
+    margin-bottom: 20px;
+}
+main .form form .field-wrapper .field-personal-details-panel .date-wrapper input{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+main .form form .field-wrapper .field-loan-summary-panel .text-wrapper.field-loan-amount {
+    padding: 10px 20px 0 20px;
+    border-left: 3px solid #99bce2;
+}
+main .form form .field-wrapper .field-loan-summary-panel .text-wrapper.field-loan-amount input{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.field-loan-disclaimer p {
+    color: blue !important;
+}
+.field-loan-summary-img {
+    width: 100px;
+}
+main .form form .field-wrapper .field-loan-application-number.text-wrapper input{
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-size: 24px;
+    font-weight: 700;
+}
